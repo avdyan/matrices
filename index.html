@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles/index.css"> -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/mvp.css"> -->
+    <title>Calculadora de Matrices</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="wrapper">
+        <div>
+            <h1 style="text-align: center;">Calculadora de matrices</h1>
+        </div>
+
+        <!-- Cuanto por cuanto de las matrices -->
+        <div class="grid">
+            <div>
+                <input type="number" class="generator" id="left" placeholder="Altura"/>
+            </div>
+            <div>
+                <input type="number" class="generator" id="right" placeholder="Anchura"/>
+            </div>
+        </div>
+
+        <!-- Cual lado y el boton generar -->
+        <div class="grid">
+            <div>
+                <select name="where" id="where">
+                    <option value="left">Derecha</option>
+                    <option value="right">Izquierda</option>
+                </select>
+            </div>
+            <div>
+                <button type="button" class="btn btn-generar" id="generator">Generar</button>
+            </div>
+        </div>
+
+        <!-- Lado izquierdo, botones y lado derecho -->
+        <div class="grid">
+            <div>
+                <div class="matrix-left">
+                    <div class="matrix-title">
+                        <h3>Izquierda</h3>
+                    </div>
+                    <form id="leftFrm">
+                        <div class="place-holder" id="left-container">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="number" class="cell" id="left-0-0" name="left-0-0" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="left-0-1" name="left-0-1" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="left-0-2" name="left-0-2" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="cell" id="left-1-0" name="left-1-0" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="left-1-1" name="left-1-1" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="left-1-2" name="left-1-2" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="cell" id="left-2-0" name="left-2-0" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="left-2-1" name="left-2-1" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="left-2-2" name="left-2-2" placeholder="0"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div style="display: grid; place-content: center;">
+                <div class="btn-container">
+                    <button type="button" id="add">Suma</button>
+                    <button type="button" id="gap">Resta</button>
+                    <button type="button" id="mul">Multiplicación</button>
+                </div>
+            </div>
+            <div>
+                <div class="matrix-right">
+                    <div class="matrix-title">
+                        <h3>Derecha</h3>
+                    </div>
+                    <form id="rightFrm">
+                        <div class="place-holder" id="right-container">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="number" class="cell" id="right-0-0" name="right-0-0" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="right-0-1" name="right-0-1" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="right-0-2" name="right-0-2" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="cell" id="right-1-0" name="right-1-0" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="right-1-1" name="right-1-1" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="right-1-2" name="right-1-2" placeholder="0"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="cell" id="right-2-0" name="right-2-0" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="right-2-1" name="right-2-1" placeholder="0"></td>
+                                        <td><input type="number" class="cell" id="right-2-2" name="right-2-2" placeholder="0"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <h2 style="text-align: center;">Resultado</h2>
+            <div id="result">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
