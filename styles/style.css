@@ -1,0 +1,27 @@
+/* Styles for phone-sized screens */
+@media only screen and (max-width: 767px) {
+    .por{
+        margin-bottom: 15px
+    }
+}
+
+/* Styles for larger screens (laptops, desktops, etc.) */
+@media only screen and (min-width: 768px) {
+    .por{
+        margin-top: 10px;
+    }
+
+    .container {
+        max-width: 900px !important;
+    }
+
+    #leftFrmtable input {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
